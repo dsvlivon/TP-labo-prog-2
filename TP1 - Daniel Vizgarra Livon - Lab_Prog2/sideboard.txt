@@ -1,0 +1,26 @@
+	public string DecimalBinario(double numero)
+        {
+            string retorno = "Valor invalido";
+            if(numero>0)
+            {
+                Int64 aux = Convert.ToInt64(Math.Abs(numero));
+                retorno = Convert.ToString(aux, 2);
+                return retorno;
+            }
+            return retorno;
+        }
+
+        public string DecimalBinario(string numero)
+        {
+            string retorno;
+
+            if(!EsBinario(numero))
+            {
+                retorno = "Valor Invalido";
+            }
+            else
+            {
+                retorno = DecimalBinario(numero);
+            }
+            return retorno;
+        }

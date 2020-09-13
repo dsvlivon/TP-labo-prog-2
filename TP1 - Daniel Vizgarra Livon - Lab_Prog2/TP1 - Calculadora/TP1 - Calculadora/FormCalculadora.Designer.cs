@@ -72,7 +72,9 @@
             // 
             resources.ApplyResources(this.btnConvertirAdecimal, "btnConvertirAdecimal");
             this.btnConvertirAdecimal.Name = "btnConvertirAdecimal";
+            this.btnConvertirAdecimal.TabStop = false;
             this.btnConvertirAdecimal.UseVisualStyleBackColor = true;
+            this.btnConvertirAdecimal.Click += new System.EventHandler(this.btnConvertirAdecimal_Click);
             // 
             // cmbOperador
             // 
@@ -121,6 +123,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCalculadora";
+            this.Load += new System.EventHandler(this.FormCalculadora_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

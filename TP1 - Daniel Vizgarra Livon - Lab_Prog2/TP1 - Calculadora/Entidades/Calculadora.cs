@@ -8,6 +8,11 @@ namespace Entidades
 {
     public static class Calculadora
     {
+        /// <summary>
+        /// Valida que se haya ingresado +,-,* o /, lo convierte 
+        /// </summary>
+        /// <param name="operador"></param>
+        /// <returns>Devolvera como string el valor validado, caso contrario, devuelve "+"</returns>
         private static string ValidarOperador(char operador)
         {
             string retorno;
@@ -22,6 +27,13 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Dependiendo del caso, realiza una operacion entre los valores de num1 y num1
+        /// </summary>
+        /// <param name="num1"></param>
+        /// <param name="num2"></param>
+        /// <param name="operador"></param>
+        /// <returns>devuelve como double el resultado de la operacion correspondiente</returns>
         public static double Operar(Numero num1, Numero num2, string operador)
         {
             double retorno;
