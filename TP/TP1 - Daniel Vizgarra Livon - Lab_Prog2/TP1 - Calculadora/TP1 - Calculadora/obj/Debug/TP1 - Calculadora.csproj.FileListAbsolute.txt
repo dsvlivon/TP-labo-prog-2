@@ -1,0 +1,13 @@
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1 - Calculadora.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1___Calculadora.Properties.Resources.resources
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1 - Calculadora.csproj.GenerateResource.cache
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1 - Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\bin\Debug\TP1 - Calculadora.exe.config
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\bin\Debug\TP1 - Calculadora.exe
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\bin\Debug\TP1 - Calculadora.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\bin\Debug\es-AR\TP1 - Calculadora.resources.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1___Calculadora.FormCalculadora.resources
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1___Calculadora.FormCalculadora.es-AR.resources
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\es-AR\TP1 - Calculadora.resources.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1 - Calculadora.exe
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1 - Calculadora.pdb
