@@ -26,7 +26,7 @@ namespace Entidades
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
-        protected abstract ETamanio Tamanio { get; set; }
+        protected abstract ETamanio Tamanio { get; }
 
         public Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
