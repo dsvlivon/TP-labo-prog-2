@@ -24,3 +24,10 @@ D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-N2\TP-02\TP-02\obj\Debug\TP-02.exe
 C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP2 - Daniel Vizgarra Livon - Lab_Prog2\TP-02\TP-02\obj\Debug\TP-02.csprojAssemblyReference.cache
 C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP2 - Daniel Vizgarra Livon - Lab_Prog2\TP-02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP2 - Daniel Vizgarra Livon - Lab_Prog2\TP-02\TP-02\obj\Debug\TP-02.exe
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP2 - Daniel Vizgarra Livon - Lab_Prog2\TP-02\TP-02\bin\Debug\TP-02.exe.config
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP2 - Daniel Vizgarra Livon - Lab_Prog2\TP-02\TP-02\bin\Debug\TP-02.exe
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP2 - Daniel Vizgarra Livon - Lab_Prog2\TP-02\TP-02\bin\Debug\TP-02.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP2 - Daniel Vizgarra Livon - Lab_Prog2\TP-02\TP-02\bin\Debug\Entidades.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP2 - Daniel Vizgarra Livon - Lab_Prog2\TP-02\TP-02\bin\Debug\Entidades.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP2 - Daniel Vizgarra Livon - Lab_Prog2\TP-02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP2 - Daniel Vizgarra Livon - Lab_Prog2\TP-02\TP-02\obj\Debug\TP-02.pdb
