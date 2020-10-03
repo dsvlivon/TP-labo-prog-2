@@ -35,6 +35,7 @@ namespace Entidades
         }
         #endregion
 
+        #region "Propiedades"
         /// <summary>
         /// Sedan son 'Mediano'
         /// </summary>
@@ -46,6 +47,9 @@ namespace Entidades
                 /// Sedan son 'Mediano'
             }
         }
+        #endregion
+
+        #region "Sobrecargas"
         /// <summary>
         /// Publica todos los datos del Vehiculo + datos del tipo Sedan
         /// </summary>
@@ -62,5 +66,6 @@ namespace Entidades
 
             return sb.ToString();
         }
+        #endregion
     }
 }

@@ -1,0 +1,13 @@
+declaracion d campos
+
+#region "Constructores" 
+#endregion 
+
+#region "Sobrecargas" 
+#endregion 
+
+#region "Metodos" 
+#endregion 
+
+#region "Constructores" 
+#endregion 

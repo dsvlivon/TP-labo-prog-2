@@ -8,10 +8,14 @@ namespace Entidades
 {
     public class Suv : Vehiculo   
     {
-        public Suv(EMarca marca, string chasis, ConsoleColor color)
-            : base(chasis, marca, color)
+        #region "Constructores"
+        public Suv(EMarca marca, string chasis, ConsoleColor color): base(chasis, marca, color)
         {
+
         }
+        #endregion
+
+        #region "Propiedades"
         /// <summary>
         /// SUV son 'Grande'
         /// </summary>
@@ -22,6 +26,9 @@ namespace Entidades
                 return ETamanio.Grande;
             }
         }
+        #endregion
+
+        #region "Sobrecargas"
         /// <summary>
         /// Publica todos los datos del Vehiculo + datos del tipo Suv.
         /// </summary>
@@ -38,5 +45,6 @@ namespace Entidades
 
             return sb.ToString();
         }
+        #endregion
     }
 }
