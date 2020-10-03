@@ -22,7 +22,10 @@ namespace Entidades
                 return ETamanio.Chico;
             }
         }
-
+        /// <summary>
+        /// Publica todos los datos del Vehiculo + datos del tipo Ciclomotor.
+        /// </summary>
+        /// <returns></returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

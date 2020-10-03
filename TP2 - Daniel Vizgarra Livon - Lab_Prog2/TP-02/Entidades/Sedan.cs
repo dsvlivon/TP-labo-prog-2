@@ -16,23 +16,24 @@ namespace Entidades
         }
         ETipo tipo;
 
+        #region "Constructores"
         /// <summary>
-        /// Por defecto, TIPO será (Davila incico corregir "CuatroPuertas" a Monovolumen)!!!
+        /// Por defecto, TIPO será (Davila indico corregir "CuatroPuertas" a Monovolumen)!!!
         /// </summary>
         /// <param name="marca"></param>
         /// <param name="chasis"></param>
-        /// <param name="color"></param>
-       
+        /// <param name="color"></param>       
         public Sedan(EMarca marca, string chasis, ConsoleColor color): this(marca, chasis,color, ETipo.Monovolumen)
         {
-
+            //constructor d clase c/ 3 argumentos. this(4 argumentos) lo declara monovolumen
         }
         
-        public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo atipo)
-            : base(chasis, marca, color)
+        public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo atipo): base(chasis, marca, color)
         {
             tipo = atipo;
+            //este lo toma c/ 4 argumentos y llama el constructor base (Vehiculo) y completa los 3 q ya sabe. 
         }
+        #endregion
 
         /// <summary>
         /// Sedan son 'Mediano'
@@ -45,7 +46,10 @@ namespace Entidades
                 /// Sedan son 'Mediano'
             }
         }
-
+        /// <summary>
+        /// Publica todos los datos del Vehiculo + datos del tipo Sedan
+        /// </summary>
+        /// <returns></returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

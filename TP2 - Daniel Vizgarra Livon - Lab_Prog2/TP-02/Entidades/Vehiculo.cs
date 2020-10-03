@@ -28,12 +28,14 @@ namespace Entidades
         /// </summary>
         protected abstract ETamanio Tamanio { get; }
 
+        #region "Constructores"
         public Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
             this.chasis = chasis;
             this.marca = marca;
             this.color = color;
         }
+        #endregion
 
         /// <summary>
         /// Publica todos los datos del Vehiculo.
@@ -42,8 +44,13 @@ namespace Entidades
         public virtual string Mostrar()
         {
             return (string)this;
+            //string sobrecargado
         }
-
+        #region "Sobrecargas"
+        /// <summary>
+        /// Construye un SB con los datos del vehiculo p
+        /// </summary>
+        /// <param name="p"></param>
         public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();
@@ -77,5 +84,6 @@ namespace Entidades
         {
             return !(v1.chasis == v2.chasis);
         }
+        #endregion
     }
 }
