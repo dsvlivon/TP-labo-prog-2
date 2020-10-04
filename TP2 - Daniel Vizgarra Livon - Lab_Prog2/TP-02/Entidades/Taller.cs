@@ -60,13 +60,25 @@ namespace Entidades
                 switch (tipo)
                 {
                     case ETipo.SUV:
-                        sb.AppendLine(v.Mostrar());
+                        if(v is Suv)
+                        { 
+                            sb.AppendLine(v.Mostrar());
+                            break;
+                        }
                         break;
                     case ETipo.Ciclomotor:
-                        sb.AppendLine(v.Mostrar());
+                        if(v is Ciclomotor)
+                        {
+                            sb.AppendLine(v.Mostrar());
+                            break;
+                        }
                         break;
                     case ETipo.Sedan:
-                        sb.AppendLine(v.Mostrar());
+                        if(v is Sedan)
+                        {
+                            sb.AppendLine(v.Mostrar());
+                            break;
+                        }
                         break;
                     default:
                         sb.AppendLine(v.Mostrar());

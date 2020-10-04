@@ -26,12 +26,10 @@ namespace Entidades
         protected abstract ETamanio Tamanio { get; }
         #endregion
 
-        #region "Constructores"
         public enum EMarca
         {
             Chevrolet, Ford, Renault, Toyota, BMW, Honda, HarleyDavidson
         }
-        #endregion
 
         #region "Constructores"
         public Vehiculo(string chasis, EMarca marca, ConsoleColor color)
