@@ -20,6 +20,9 @@ namespace Clases_Abstractas
             Argentino, Extranjero
         }
         #region Propiedades
+        /// <summary>
+        /// Propiedad que retorna el nombre si la validacion es correcta
+        /// </summary>
         public string Nombre
         {
             get
@@ -31,6 +34,9 @@ namespace Clases_Abstractas
                 this.nombre = ValidarNombreApellido(value);
             }
         }
+        /// <summary>
+        /// Propiedad que retorna el apellido si la validacion es correcta
+        /// </summary>
         public string Apellido
         {
             get
@@ -42,6 +48,9 @@ namespace Clases_Abstractas
                 this.apellido = ValidarNombreApellido(value);
             }
         }
+        /// <summary>
+        /// Propiedad que retorna el dni si la validacion es correcta
+        /// </summary>
         public int Dni
         {
             get
@@ -82,11 +91,11 @@ namespace Clases_Abstractas
             this.dni = default;
         }
         /// <summary>
-        /// 
+        /// constructor que recibe 3 parametros
         /// </summary>
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
-        /// <param name="nacionalidad"></param>
+        /// <param name="nacionalidad">es un enumerable</param>
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {
             this.Nombre = ValidarNombreApellido(nombre);
@@ -94,18 +103,18 @@ namespace Clases_Abstractas
             this.Nacionalidad = nacionalidad;
         }
         /// <summary>
-        /// 
+        /// constructor que recibe 4 parametros c el Dni como integer
         /// </summary>
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
         /// <param name="dni"></param>
-        /// <param name="nacionalidad"></param>
+        /// <param name="nacionalidad">es un enumerable</param>
         public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
         {
             this.Dni = dni;
         }
         /// <summary>
-        /// 
+        /// constructor que recibe 4 parametros con el dni como String
         /// </summary>
         /// <param name="nombre"></param>
         /// <param name="apellido"></param>
@@ -119,6 +128,12 @@ namespace Clases_Abstractas
         #endregion
 
         #region Metodos
+        /// <summary>
+        /// Metodo para validar Dni, dependiendo de la nacionalidad, caso contrario lanzara una excepcion
+        /// </summary>
+        /// <param name="nacionalidad">enumerable q detrmina es extranjero o argentino</param>
+        /// <param name="dato">es el dni a evaluar</param>
+        /// <returns>devuelte el dni validado</returns>
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
             if (nacionalidad == ENacionalidad.Argentino)
@@ -139,7 +154,12 @@ namespace Clases_Abstractas
             }
             throw new NacionalidadInvalidaException();
         }
-
+        /// <summary>
+        /// recibe un string como dni y lo parsea a integer
+        /// </summary>
+        /// <param name="nacionalidad">enuerable q determina el origen, caso contrario lanza una excepcion</param>
+        /// <param name="dato">el dni a evaluar</param>
+        /// <returns> llama al el metodo ValidarDni q recibe ese int</returns>
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             int auxDato;
@@ -168,7 +188,10 @@ namespace Clases_Abstractas
             }
             return auxDato;
         }
-
+        /// <summary>
+        /// Sobrecarga del Metodo ToString
+        /// </summary>
+        /// <returns>retorna un StringBuilder formateado a string</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

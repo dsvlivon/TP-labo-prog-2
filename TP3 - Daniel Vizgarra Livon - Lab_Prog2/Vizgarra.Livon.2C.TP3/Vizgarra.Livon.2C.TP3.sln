@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clases Abstractas", "Clases
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{3262619A-1AB2-46CD-B74F-8DE520AC6267}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitarios", "TestUnitarios\TestUnitarios.csproj", "{9C42FAA9-D39D-4675-BAA5-1D2BC3E1D08A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3262619A-1AB2-46CD-B74F-8DE520AC6267}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3262619A-1AB2-46CD-B74F-8DE520AC6267}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3262619A-1AB2-46CD-B74F-8DE520AC6267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C42FAA9-D39D-4675-BAA5-1D2BC3E1D08A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C42FAA9-D39D-4675-BAA5-1D2BC3E1D08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C42FAA9-D39D-4675-BAA5-1D2BC3E1D08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C42FAA9-D39D-4675-BAA5-1D2BC3E1D08A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
