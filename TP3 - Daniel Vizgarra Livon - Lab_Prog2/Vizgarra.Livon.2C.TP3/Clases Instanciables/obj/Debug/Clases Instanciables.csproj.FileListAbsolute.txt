@@ -1,0 +1,13 @@
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\bin\Debug\Clases Instanciables.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\bin\Debug\Clases Instanciables.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\obj\Debug\Clases Instanciables.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\obj\Debug\Clases Instanciables.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\obj\Debug\Clases Instanciables.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\obj\Debug\Clases Instanciables.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\bin\Debug\Archivos.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\bin\Debug\Clases Abstractas.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\bin\Debug\Excepciones.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\bin\Debug\Archivos.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\bin\Debug\Clases Abstractas.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\bin\Debug\Excepciones.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Clases Instanciables\obj\Debug\Clases Instanciables.csproj.CopyComplete

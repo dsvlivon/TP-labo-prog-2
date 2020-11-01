@@ -1,0 +1,6 @@
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Excepciones\bin\Debug\Excepciones.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Excepciones\bin\Debug\Excepciones.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Excepciones\obj\Debug\Excepciones.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Excepciones\obj\Debug\Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Excepciones\obj\Debug\Excepciones.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Excepciones\obj\Debug\Excepciones.pdb

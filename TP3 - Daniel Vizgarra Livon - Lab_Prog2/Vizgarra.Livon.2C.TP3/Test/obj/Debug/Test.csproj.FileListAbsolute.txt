@@ -1,0 +1,16 @@
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Test.exe.config
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Test.exe
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Test.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Archivos.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Clases Abstractas.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Clases Instanciables.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Excepciones.dll
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Archivos.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Clases Abstractas.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Clases Instanciables.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\bin\Debug\Excepciones.pdb
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\obj\Debug\Test.exe
+C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP3 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP3\Test\obj\Debug\Test.pdb
