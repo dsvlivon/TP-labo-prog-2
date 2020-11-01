@@ -191,7 +191,7 @@ namespace Clases_Abstractas
         /// <summary>
         /// Sobrecarga del Metodo ToString
         /// </summary>
-        /// <returns>retorna un StringBuilder formateado a string</returns>
+        /// <returns>retorna un StringBuilder formateado a string con la informacion de un objeto tipo persona</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

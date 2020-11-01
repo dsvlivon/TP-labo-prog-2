@@ -57,9 +57,11 @@ namespace Clases_Instanciables
 
         #region Metodos
         /// <summary>
-        /// Metodo Virtual para mostar los datos de base()Persona+Universitario+Alumnos
+        /// Sobrecarga del Metodo ToString
         /// </summary>
-        /// <returns>un stringbuilder formateado a string</returns>
+        /// <returns> retorna un StringBuilder formateado a string con la informacion de:
+        /// objeto tipo Persona + Alumno </returns>
+
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();

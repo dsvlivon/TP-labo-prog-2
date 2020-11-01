@@ -36,9 +36,10 @@ namespace Clases_Abstractas
 
         #region Metodos
         /// <summary>
-        /// Metodo virtual para mostar los datos de base()Persona+Universitario
+        /// Sobrecarga del Metodo ToString
         /// </summary>
-        /// <returns>retorna un StringBuider formateado a string</returns>
+        /// <returns> retorna un StringBuilder formateado a string con la informacion de:
+        /// objeto tipo Persona + Universitario </returns>
         protected virtual string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();

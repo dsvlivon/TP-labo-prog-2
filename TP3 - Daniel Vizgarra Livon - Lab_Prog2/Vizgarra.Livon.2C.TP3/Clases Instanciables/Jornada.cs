@@ -73,11 +73,12 @@ namespace Clases_Instanciables
         #endregion
 
         #region Metdos
-        /// <summary>
+         // <summary>
         /// metodo para guardar un archivo 
         /// </summary>
         /// <param name="jornada"></param>
-        /// <returns> invocaicon del metodo guardar el archivo "Jornada.txt" en el directorio: escritorio</returns>
+        /// <returns> invocaicon del metodo guardar los datos del objeto "jornada" recibido x parametros.
+        /// en el archivo "Jornada.txt" en el directorio: escritorio</returns>
         public static bool Guardar(Jornada jornada)
         {
             Texto txt = new Texto();

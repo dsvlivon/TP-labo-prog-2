@@ -70,6 +70,9 @@ namespace Clases_Instanciables
         #endregion
 
         #region Constructores
+        /// <summary>
+        /// Constructor por defecto que inicializa las listas
+        /// </summary>
         public Universidad()
         {
             this.alumnos = new List<Alumno>();
@@ -77,7 +80,12 @@ namespace Clases_Instanciables
             this.profesores = new List<Profesor>();
         }
         #endregion
-
+        // <summary>
+        /// metodo para guardar un archivo 
+        /// </summary>
+        /// <param name="jornada"></param>
+        /// <returns> invocaicon del metodo guardar los datos del objeto "uni" recibido x parametros.
+        /// en el archivo "Universidad.xml" en el directorio: escritorio</returns>
         #region Metodos
         public static bool Guardar(Universidad uni)
         {
@@ -85,7 +93,10 @@ namespace Clases_Instanciables
             return xml.Guardar(string.Format("{0}\\Universidad.xml", Environment.GetFolderPath(Environment.SpecialFolder.Desktop)), uni);
         }
 
-        //public Universidad Leer()
+        /// <summary>
+        /// metodo para leer datos de un archivo en un directorio especifico
+        /// </summary>
+        /// <returns> una variable c el contenido leido </returns>
         public static Universidad Leer()
         {
             Xml<Universidad> xml = new Xml<Universidad>();
@@ -94,7 +105,11 @@ namespace Clases_Instanciables
             xml.Leer(String.Format("{0}\\Universidad.xml", Environment.GetFolderPath(Environment.SpecialFolder.Desktop)), out universidad);
             return universidad;
         }
-
+        /// <summary>
+        /// Sobrecarga del metdo MostrarDatos
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <returns> retora un stringBuilder formateado a string con los datos de la lista jornada del objeto uni </returns>
         private static string MostrarDatos(Universidad uni)
         {
             StringBuilder sb = new StringBuilder();
@@ -105,7 +120,12 @@ namespace Clases_Instanciables
             }
             return sb.ToString();
         }
-
+        /// <summary>
+        /// sobrecarga del operador de comparacion Universidad == Alumno
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="a"></param>
+        /// <returns> retorna bool T o F dependiendo del resultado </returns>
         public static bool operator ==(Universidad g, Alumno a)
         {
             foreach (Alumno alumno in g.Alumnos)
@@ -117,10 +137,22 @@ namespace Clases_Instanciables
             }
             return false;
         }
+        /// <summary>
+        /// Negacion de la comparacion Universidad == Alumno
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="a"></param>
+        /// <returns> retorna bool T o F dependiendo del resultado </returns>
         public static bool operator !=(Universidad g, Alumno a)
         {
             return !(g==a);
         }
+        /// <summary>
+        /// sobrecarga del operador de comparacion Universidad == Profesor
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="a"></param>
+        /// <returns> retorna bool T o F dependiendo del resultado </returns>
         public static bool operator ==(Universidad g, Profesor i)
         {
             foreach (Profesor profesor in g.profesores)
@@ -132,10 +164,23 @@ namespace Clases_Instanciables
             }
             return false;
         }
+        /// <summary>
+        /// Negacion de la comparacion Universidad == Profesor
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="i"></param>
+        /// <returns> retorna bool T o F dependiendo del resultado </returns>
         public static bool operator !=(Universidad g, Profesor i)
         {
             return !(g == i);
         }
+
+        /// <summary>
+        /// Sobrecarga el operador de comparacion Universidad == EClases clase
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="clase"></param>
+        /// <returns> retorna bool T o F dependiendo del resultado </returns>
         public static Profesor operator ==(Universidad u, EClases clase)
         {
             foreach (Profesor profesor in u.Instructores)
@@ -148,6 +193,14 @@ namespace Clases_Instanciables
             
             throw new SinProfesorException();
         }
+
+        /// <summary>
+        /// Negacion de la comparacion Universidad == clase
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="clase"></param>
+        /// <returns> retorna bool T o F dependiendo del resultado </returns>
+
         public static Profesor operator !=(Universidad u, EClases clase)
         {
             foreach (Profesor profesor in u.Instructores)
@@ -163,9 +216,10 @@ namespace Clases_Instanciables
         {
             return MostrarDatos(this);
         }
+
         public static Universidad operator +(Universidad g, EClases clase)
         {
-            Profesor profesor = g == clase; //esto no lo entiendo
+            Profesor profesor = g == clase; //esto no lo sabia...
             Jornada jornada = new Jornada(clase, profesor);
             foreach (Alumno alumno in g.Alumnos)
             {
