@@ -10,21 +10,26 @@ namespace Entidades
 {
     public class Negocio
     {
+        private List<Cliente> clientes;
         private List<Producto> productos;
         private List<Venta> ventas;
         public event Action productosListChanged;
 
-        /// <summary>
-        /// Constructor, instancia los campos de tipo lista. 
-        /// Asocia el evento de cambios en la tabla de productos para actualizar la lista.
-        /// </summary>
+        #region Constructor
         public Negocio()
         {
+            this.productos = new List<Producto>();
+            this.clientes = new List<Cliente>();
+            this.ventas = new List<Venta>();
+            
+            /*
             this.productos = ProductosDB.SelectAll();
             ProductosDB.ProductosDBChanged += ActualizarListaProductos;
-            this.ventas = new List<Venta>();
-        }
+            */
+            }
+        #endregion
 
+        #region Propiedades
         public List<Producto> Productos
         {
             get
@@ -37,62 +42,95 @@ namespace Entidades
                 this.productosListChanged();
             }
         }
-
-        /// <summary>
-        /// Verifica si un producto se encuentra en la lista de productos.
-        /// </summary>
-        /// <param name="negocio"></param>
-        /// <param name="producto"></param>
-        /// <returns></returns>
-        public static bool operator ==(Negocio negocio, Producto producto)
+        public List<Cliente> Clientes
         {
-            foreach (Producto p in negocio.productos)
+            get
             {
-                if (p.Codigo == producto.Codigo)
+                return this.clientes;
+            }
+            set
+            {
+                this.clientes = value;
+                this.productosListChanged();
+            }
+        }
+        public List<Venta> Ventas
+        {
+            get
+            {
+                return this.ventas;
+            }
+        }
+        #endregion 
+
+        #region Metodos
+        public static bool operator ==(Negocio n, Producto p)
+        {
+            foreach (Producto item in n.productos)
+            {
+                if (item.Codigo == p.Codigo)
                 {
                     return true;
                 }
             }
-
             return false;
         }
 
-        /// <summary>
-        /// Verifica si un producto NO se encuentra en la lista de productos. 
-        /// </summary>
-        /// <param name="negocio"></param>
-        /// <param name="producto"></param>
-        /// <returns></returns>
-        public static bool operator !=(Negocio negocio, Producto producto)
+        public static bool operator !=(Negocio n, Producto p)
         {
-            return !(negocio == producto);
+            return !(n == p);
         }
 
-        /// <summary>
-        /// Genera una nueva venta.
-        /// </summary>
-        /// <param name="producto">Producto a Vender.</param>
-        /// <param name="cantidad">Cantidad solicitada del producto.</param>
+        public static bool operator ==(Negocio n, Cliente c)
+        {
+            foreach (Cliente item in n.clientes)
+            {
+                if (item.Id == c.Id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+                
+        public static bool operator !=(Negocio n, Cliente c)
+        {
+            return !(n == c);
+        }
+
+        public static Negocio operator +(Negocio n, Cliente c)
+        {
+            if (n != c)
+            {
+                n.Clientes.Add(c);
+                return n;
+            }
+            throw new Exception();//armar la excepcion p el caso
+        }
+
+        public static Negocio operator +(Negocio n, Producto p)
+        {
+            if (n != p)
+            {
+                n.Productos.Add(p);
+                return n;
+            }
+            throw new Exception();//armar la excepcion p el caso
+        }
+        
         public void Vender(Producto producto, int cantidad)
         {
             Venta nuevaVenta = new Venta(producto, cantidad);
             this.ventas.Add(nuevaVenta);
 
+            /*
             string ruta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), String.Format(@"Venta_{0}.bin", nuevaVenta.Fecha.ToString("ddMMyyyy_HHmmss")));
             Serializador<Venta>.SerializarABinario(nuevaVenta, ruta);
             ruta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), String.Format(@"Venta_{0}.xml", nuevaVenta.Fecha.ToString("ddMMyyyy_HHmmss")));
             Serializador<Venta>.SerializarAXml(nuevaVenta, ruta);
+            */
         }
-
-        private void ActualizarListaProductos(AccionesDB accion)
-        {
-            this.Productos = ProductosDB.SelectAll();
-        }
-
-        /// <summary>
-        /// Devuelve un string conteniendo la descripción breve de cada venta en la lista de ventas. 
-        /// </summary>
-        /// <returns></returns>
+                
         public string ListarVentas()
         {
             List<Venta> ventasOrdenadas = this.ventas.OrderByDescending(x => x.Fecha).ToList();
@@ -100,10 +138,18 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
             foreach (Venta venta in ventasOrdenadas)
             {
-                sb.AppendLine(venta.ObtenerDescripcion()));
+                sb.AppendLine(venta.ObtenerDescripcion());
             }
 
             return sb.ToString();
         }
+        
+        /*
+        private void ActualizarListaProductos(AccionesDB accion)
+        {
+            this.Productos = ProductosDB.SelectAll();
+        }
+        */
+        #endregion
     }
 }

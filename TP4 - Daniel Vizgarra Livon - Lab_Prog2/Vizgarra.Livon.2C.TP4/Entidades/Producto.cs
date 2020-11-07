@@ -15,33 +15,43 @@ namespace Entidades
     {
         private int stock;
         private double precio;
+        private string marca;
         private int codigo;
         private string descripcion;
         private EFamilia familia;
 
         #region Constructores
-
         public Producto()
         {
             
         }
 
-        /// <summary>
-        /// Constructor. Inicializa los atributos del producto. 
-        /// </summary>
-        /// <param name="codigo">Codigo único (PK) del producto en la base de datos.</param>
-        /// <param name="descripcion">Descripción del producto.</param>
-        /// <param name="stock">Stock disponible del producto.</param>
-        /// <param name="precio">Precio del producto.</param>
-        /// <param name="familia"> enumerados con tipos de productos.</param>
-        public Producto(int codigo, string descripcion, int stock, double precio, EFamilia familia)
+        public Producto(int codigo, string descripcion, EFamilia familia)
         {
             this.codigo = codigo;
-            this.stock = stock;
-            this.precio = precio;
             this.descripcion = descripcion;
             this.familia = familia;
+            this.precio = 0;
+            this.marca = "";
+            this.stock = 0;
+        }
 
+        public Producto(int codigo, string descripcion, EFamilia familia, double precio) 
+            :this(codigo,descripcion,familia)
+        {
+            this.precio = precio;
+        }
+
+        public Producto(int codigo, string descripcion, EFamilia familia, double precio, int stock)
+            : this(codigo, descripcion,familia,precio)
+        {
+            this.stock = stock;
+        }
+
+        public Producto(int codigo, string descripcion, EFamilia familia, double precio, int stock, string marca) 
+            : this(codigo, descripcion, familia, precio,stock)
+        {
+            this.marca = marca;
         }
         #endregion
 
@@ -102,7 +112,12 @@ namespace Entidades
         /// Familia del producto. 
         /// </summary>
         public EFamilia Familia
-        { get { return this.familia;}}
+        { 
+            get 
+            { 
+                return this.familia;
+            }
+        }
 
         /// <summary>
         /// Código del producto en la base de datos (PK). 

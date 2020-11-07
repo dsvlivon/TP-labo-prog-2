@@ -55,15 +55,45 @@ namespace Entidades
         #endregion
 
         #region Propiedades
-        public int Id { get => id; set => id = value; }
-        public string Direccion { get => direccion; set => direccion = value; }
-        public string Telefono { get => telefono; set => telefono = value; }
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+            set
+            {
+                this.id=id;
+            }
+        }
+        public string Direccion
+        {
+            get
+            {
+                return this.direccion;
+            }
+            set
+            {
+                this.direccion = ValidarString(value);
+            }
+        }
+        public string Telefono
+        {
+            get
+            {
+                return this.telefono;
+            }
+            set
+            {
+                this.direccion = ValidarTelefono(value);
+            }
+        }
         #endregion
 
         #region Metodos
         public override string ValidarString(string value)
         {
-            Regex reg = new Regex(@"^[A-Z][a-z ]+$");
+            Regex reg = new Regex(@"^[A-Z][a-z ]^[0-9]+$");
             if (reg.IsMatch(value))
             {
                 return value;

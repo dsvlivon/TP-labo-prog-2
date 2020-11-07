@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Comun;
 
-namespace x
+namespace Datos
 {
-    public class Class1
+    public class ProductosDAO
     {
-        private EFamilia eFamilia;
     }
 }

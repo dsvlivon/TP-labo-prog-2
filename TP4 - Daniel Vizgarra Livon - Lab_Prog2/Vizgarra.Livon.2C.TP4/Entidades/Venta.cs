@@ -12,6 +12,7 @@ namespace Entidades
         private double precioFinal;
         private int cantidad;
 
+        #region Constructores
         static Venta()
         {
             Venta.porcentajeIva = 21;
@@ -21,14 +22,15 @@ namespace Entidades
         {
 
         }
-
         internal Venta(Producto producto, int cantidad)
         {
             this.cantidad = cantidad;
             this.producto = producto;
             this.Vender(cantidad);
         }
+        #endregion
 
+        #region Propiedades
         public static int PorcentajeIva
         {
             get
@@ -88,7 +90,9 @@ namespace Entidades
                 this.precioFinal = value;
             }
         }
+        #endregion
 
+        #region Metodos
         private void Vender(int cantidad)
         {
             producto.Stock -= cantidad;
@@ -106,6 +110,6 @@ namespace Entidades
         {
             return String.Format("{0} - {1} - {2}", this.fecha, this.producto.Descripcion, this.precioFinal.FormatearPrecio());
         }
-
+        #endregion
     }
 }
