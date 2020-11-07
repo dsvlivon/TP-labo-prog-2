@@ -1,0 +1,23 @@
+Damian quiere un sistemita de gestion q le permita manejar el stock
+de su negocio de venta de articulos d limpieza y artículos de higiene
+
+basicamente seria un ABM de productos con:
+-descripcion 
+-codigo
+-precio
+-familia
+
+abm de stock con:
+venta - calculo total y subtotal
+calculo de iba
+calculo de retencion de IB
+descuento de stock
+ajuste de stock
+ingreso de OC
+
+abm de clientes con:
+-nombre
+-cuil/cuit
+-id
+-telefono
+-direccion
