@@ -16,7 +16,7 @@ namespace Test
         {
             try
             {
-                Console.WriteLine("      TEST DEL SISTEMA:\n" + "Impresión de pruebas del sistema:\n" + "---------------------------------\n");
+                Console.WriteLine("              TEST\n" + "Impresión de pruebas del sistema:\n" + "---------------------------------\n");
                 /*
                 #region Testeos
                 try
@@ -39,32 +39,34 @@ namespace Test
                 */
 
                 Console.ReadKey();
-                Console.Clear();
 
                 #region CargaDePrueba
                 Negocio negocioDamian = new Negocio();
-                Producto p1 = new Producto(100, "Alcohol en gel", EFamilia.Alcohol, 85.25);
-                Producto p2 = new Producto(102, "Desinfectactante en aerosol", EFamilia.Desinfectante, 125.35, 50);
-                Producto p3 = new Producto(101, "Detergente liquido", EFamilia.Detergente, 175.00, 20, "Magistral");
+                Producto p1 = new Producto(100, "Alcohol", EFamilia.Alcohol, 85.25);
+                Producto p2 = new Producto(102, "Desinfectactante", EFamilia.Desinfectante, 125.35, 50);
+                Producto p3 = new Producto(101, "Detergente", EFamilia.Detergente, 175.00, 20, "Magistral");
 
-                Cliente c1 = new Cliente("Federico", "Davila", "33456789", 1, "Alvear 123", "4244-4444");
-                Cliente c2 = new Cliente("Mauricio", "Ceriza", "33123456", 2, "Araos 456", "4234-6789");
 
+                Cliente c1 = new Cliente("Federico", "Davila", "33456789", 1, "French 123", "4244-4444");
+                Cliente c2 = new Cliente("Mauricio", "Ceriza", "33123456", 2, "Berutti 456", "4244-5555");
+                Cliente c3 = new Cliente("daniel", "livon", "35123456", 10, "alasd 1", "442+-");
+               
                 negocioDamian += c1;
                 negocioDamian += c2;
-                foreach(Cliente c in negocioDamian.Clientes)
+                negocioDamian += c3;
+                foreach (Cliente c in negocioDamian.Clientes)
                 {
                     Console.WriteLine(c.ToString());
                 }
                 negocioDamian += p1;
                 negocioDamian += p2;
                 negocioDamian += p3;
-                foreach(Producto p in negocioDamian.Productos)
+                foreach (Producto p in negocioDamian.Productos)
                 {
                     Console.WriteLine(p.ToString());
                 }
                 #endregion
-
+                /*
                 #region ManejoDeArchivo
                 try
                 {
@@ -77,10 +79,11 @@ namespace Test
                 }
 
                 #endregion
+                */
             }
-            catch(Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("SE PUDRIO LA MOMIA!!!");
+                Console.WriteLine("SE PUDRIO LA MOMIA!!! : " + ex.Message);
             }
             Console.ReadKey();
         }

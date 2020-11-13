@@ -105,7 +105,7 @@ namespace Entidades
                 n.Clientes.Add(c);
                 return n;
             }
-            throw new Exception();//armar la excepcion p el caso
+            throw new Exception("el cliente ya existe");
         }
 
         public static Negocio operator +(Negocio n, Producto p)
@@ -115,7 +115,7 @@ namespace Entidades
                 n.Productos.Add(p);
                 return n;
             }
-            throw new Exception();//armar la excepcion p el caso
+            throw new Exception("el producto ya existe");//armar la excepcion p el caso
         }
         
         public void Vender(Producto producto, int cantidad)

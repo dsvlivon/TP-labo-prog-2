@@ -33,8 +33,8 @@ namespace Entidades
            : base(nombre, apellido, dni)//public Persona(string nombre, string apellido, string dni)        
         {
             this.Id = id;
-            this.Direccion = default;
-            this.Telefono = default;
+            //this.Direccion = default;
+            //this.Telefono = default;
         }
         /// <summary>
         /// constructr que recibe 6 parametros. (completo)
@@ -63,7 +63,7 @@ namespace Entidades
             }
             set
             {
-                this.id=id;
+                this.id=value;
             }
         }
         public string Direccion
@@ -74,7 +74,7 @@ namespace Entidades
             }
             set
             {
-                this.direccion = ValidarString(value);
+                this.direccion = value;//ValidarString(value);
             }
         }
         public string Telefono
@@ -142,8 +142,8 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
             sb.AppendFormat("{0}\n", base.ToString());
             sb.AppendFormat("Id Cliente: {0}\n", Id);
-            sb.AppendFormat("Direccion: {1}\n", Direccion);
-            sb.AppendFormat("Telefono: {2}\n", Telefono);
+            sb.AppendFormat("Direccion: {0}\n", Direccion);
+            sb.AppendFormat("Telefono: {0}\n", Telefono);
 
             return sb.ToString();
         }
