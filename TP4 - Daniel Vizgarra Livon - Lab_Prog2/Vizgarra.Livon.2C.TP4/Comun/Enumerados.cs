@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 
 namespace Comun
-{
-    public enum EFamilia
-    {
-        Detergente, Alcohol, Desinfectante
-    }
-       
+{        
     public enum EAccionesDB
     {
         Insert, Update, Delete

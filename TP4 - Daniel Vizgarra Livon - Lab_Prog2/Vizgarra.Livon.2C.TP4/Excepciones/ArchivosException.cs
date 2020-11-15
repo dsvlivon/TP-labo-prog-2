@@ -21,5 +21,9 @@ namespace Excepciones
         {
 
         }
+        public ArchivosException(string message, Exception InnerException) : base(message)
+        {
+
+        }
     }
 }

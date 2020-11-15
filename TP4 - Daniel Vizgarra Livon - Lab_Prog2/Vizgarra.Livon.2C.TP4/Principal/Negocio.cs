@@ -4,29 +4,38 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-//using ComiqueriaDataAccess;
+//using Comun;
+using Entidades;
+using PersistenciaDeDatos;
+using Excepciones;
 
-namespace Entidades
+
+namespace ClasePrincipal
 {
     public class Negocio
     {
         private List<Cliente> clientes;
         private List<Producto> productos;
         private List<Venta> ventas;
-        public event Action productosListChanged;
+        public event Action ListChanged;
+
 
         #region Constructor
         public Negocio()
         {
-            this.productos = new List<Producto>();
-            this.clientes = new List<Cliente>();
-            this.ventas = new List<Venta>();
-            
-            /*
-            this.productos = ProductosDB.SelectAll();
-            ProductosDB.ProductosDBChanged += ActualizarListaProductos;
+            /* p probar sin DB
+            //this.productos = new List<Producto>();
+            //this.clientes = new List<Cliente>();
             */
-            }
+            this.clientes = ClientesDB.SelectAll();
+            this.productos = ProductosDB.SelectAll();
+            this.ventas = new List<Venta>();
+
+            /*            
+            ProductosDB.ProductosDBChanged += ActualizarListaProductos;
+            ClientesDB.ClientesDBChanged += ActualizarListaClientes;
+            */
+        }
         #endregion
 
         #region Propiedades
@@ -39,7 +48,7 @@ namespace Entidades
             set
             {
                 this.productos = value;
-                this.productosListChanged();
+                this.ListChanged();
             }
         }
         public List<Cliente> Clientes
@@ -51,7 +60,7 @@ namespace Entidades
             set
             {
                 this.clientes = value;
-                this.productosListChanged();
+                this.ListChanged();
             }
         }
         public List<Venta> Ventas
@@ -59,6 +68,10 @@ namespace Entidades
             get
             {
                 return this.ventas;
+            }
+            set
+            {
+                this.ventas = value;
             }
         }
         #endregion 
@@ -92,7 +105,7 @@ namespace Entidades
             }
             return false;
         }
-                
+
         public static bool operator !=(Negocio n, Cliente c)
         {
             return !(n == c);
@@ -105,7 +118,7 @@ namespace Entidades
                 n.Clientes.Add(c);
                 return n;
             }
-            throw new Exception("el cliente ya existe");
+            throw new RepetidoException();
         }
 
         public static Negocio operator +(Negocio n, Producto p)
@@ -115,41 +128,35 @@ namespace Entidades
                 n.Productos.Add(p);
                 return n;
             }
-            throw new Exception("el producto ya existe");//armar la excepcion p el caso
+            throw new RepetidoException();
         }
-        
+
         public void Vender(Producto producto, int cantidad)
         {
             Venta nuevaVenta = new Venta(producto, cantidad);
             this.ventas.Add(nuevaVenta);
-
-            /*
-            string ruta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), String.Format(@"Venta_{0}.bin", nuevaVenta.Fecha.ToString("ddMMyyyy_HHmmss")));
-            Serializador<Venta>.SerializarABinario(nuevaVenta, ruta);
-            ruta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), String.Format(@"Venta_{0}.xml", nuevaVenta.Fecha.ToString("ddMMyyyy_HHmmss")));
-            Serializador<Venta>.SerializarAXml(nuevaVenta, ruta);
-            */
         }
-                
-        public string ListarVentas()
+
+        public string GenerarFactura()
         {
-            List<Venta> ventasOrdenadas = this.ventas.OrderByDescending(x => x.Fecha).ToList();
-
             StringBuilder sb = new StringBuilder();
-            foreach (Venta venta in ventasOrdenadas)
+            foreach (Venta item in this.Ventas.ToList())
             {
-                sb.AppendLine(venta.ObtenerDescripcion());
+                sb.AppendLine(item.ObtenerDescripcion());
             }
-
             return sb.ToString();
         }
-        
-        /*
-        private void ActualizarListaProductos(AccionesDB accion)
+
+        public void ActualizarAListaProductos()
         {
             this.Productos = ProductosDB.SelectAll();
         }
-        */
+
+        public void ActualizarAListaClientes()
+        {
+            this.Clientes = ClientesDB.SelectAll();
+        }
+
         #endregion
     }
 }

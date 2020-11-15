@@ -15,10 +15,9 @@ namespace Entidades
     {
         private int stock;
         private double precio;
-        private string marca;
         private int codigo;
         private string descripcion;
-        private EFamilia familia;
+        private string marca;
 
         #region Constructores
         public Producto()
@@ -26,33 +25,27 @@ namespace Entidades
             
         }
 
-        public Producto(int codigo, string descripcion, EFamilia familia)
+        public Producto(int codigo, string descripcion, string marca)
         {
             this.codigo = codigo;
             this.descripcion = descripcion;
-            this.familia = familia;
+            this.marca = marca;
             this.precio = 0;
-            this.marca = "";
             this.stock = 0;
         }
 
-        public Producto(int codigo, string descripcion, EFamilia familia, double precio) 
-            :this(codigo,descripcion,familia)
+        public Producto(int codigo, string descripcion, string marca, double precio) 
+            :this(codigo,descripcion,marca)
         {
             this.precio = precio;
         }
 
-        public Producto(int codigo, string descripcion, EFamilia familia, double precio, int stock)
-            : this(codigo, descripcion,familia,precio)
+        public Producto(int codigo, string descripcion, string marca, double precio, int stock)
+            : this(codigo, descripcion, marca, precio)
         {
             this.stock = stock;
         }
 
-        public Producto(int codigo, string descripcion, EFamilia familia, double precio, int stock, string marca) 
-            : this(codigo, descripcion, familia, precio,stock)
-        {
-            this.marca = marca;
-        }
         #endregion
 
         #region Propiedades
@@ -111,11 +104,15 @@ namespace Entidades
         /// <summary>
         /// Familia del producto. 
         /// </summary>
-        public EFamilia Familia
+        public string Marca
         { 
             get 
             { 
-                return this.familia;
+                return this.marca;
+            }
+            set
+            {
+                this.marca = ValidarString(value);
             }
         }
 
@@ -142,7 +139,7 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(String.Format("Código: {0}", this.Codigo));
             sb.AppendLine(String.Format("Descripción: {0}", this.Descripcion));
-            sb.AppendLine(String.Format("Familia: {0}", this.Familia));
+            sb.AppendLine(String.Format("Familia: {0}", this.marca));
             sb.AppendLine(String.Format("Precio: ${0:0.00}", this.Precio));
             sb.AppendLine(String.Format("Stock: {0} unidades", this.Stock));
 
@@ -162,7 +159,9 @@ namespace Entidades
             }
         }
 
-        /*private int ValidarCodigo(string value)
+        
+
+        private int ValidarCodigo(string value)
         {
             int aux;
             Regex reg = new Regex(@"^[0-9]+$");
@@ -174,7 +173,7 @@ namespace Entidades
             {
                 throw new CodigoInvalidoException();
             }
-        }*/
+        }
         #endregion
     }
 }

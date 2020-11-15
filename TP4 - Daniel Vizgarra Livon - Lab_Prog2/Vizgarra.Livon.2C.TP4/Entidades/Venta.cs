@@ -7,7 +7,7 @@ namespace Entidades
     public sealed class Venta
     {
         private static int porcentajeIva;
-        private DateTime fecha;
+        //private DateTime fecha;
         private Producto producto;
         private double precioFinal;
         private int cantidad;
@@ -22,11 +22,12 @@ namespace Entidades
         {
 
         }
-        internal Venta(Producto producto, int cantidad)
+        public Venta(Producto producto, int cantidad)
         {
             this.cantidad = cantidad;
             this.producto = producto;
             this.Vender(cantidad);
+            this.precioFinal = CalcularPrecioFinal(producto.Precio, cantidad);
         }
         #endregion
 
@@ -66,49 +67,34 @@ namespace Entidades
                 this.producto = value;
             }
         }
-
-        public DateTime Fecha
-        {
-            get
-            {
-                return this.fecha;
-            }
-            set
-            {
-                this.fecha = value;
-            }
-        }
-
         public double PrecioFinal
         {
             get
             {
                 return this.precioFinal;
-            }
-            set
-            {
-                this.precioFinal = value;
-            }
+            }            
         }
+
         #endregion
 
         #region Metodos
         private void Vender(int cantidad)
         {
             producto.Stock -= cantidad;
-            this.fecha = DateTime.Now;
-            this.precioFinal = Venta.CalcularPrecioFinal(producto.Precio, cantidad);
+            //this.fecha = DateTime.Now;
+            //this.precioFinal = Venta.CalcularPrecioFinal(producto.Precio, cantidad);
         }
 
         public static double CalcularPrecioFinal(double precioUnidad, int cantidad)
         {
-            double precioSinIva = precioUnidad * cantidad;
-            return precioSinIva + precioSinIva * Venta.porcentajeIva / 100;
+            double subtotalSinIva = precioUnidad * cantidad;
+            return subtotalSinIva + ((subtotalSinIva * Venta.porcentajeIva) / 100);
         }
 
         public string ObtenerDescripcion()
         {
-            return String.Format("{0} - {1} - {2}", this.fecha, this.producto.Descripcion, this.precioFinal.FormatearPrecio());
+            return String.Format("{0}   -   {1}    -    {2}    -   {3}   -   {4}\n", 
+                this.producto.Codigo, this.producto.Descripcion, this.producto.Precio, this.Cantidad, this.precioFinal.FormatearPrecio()) ;
         }
         #endregion
     }

@@ -30,11 +30,11 @@ namespace Entidades
         /// <param name="dni"></param>
         /// <param name="id"></param>
         public Cliente(string nombre, string apellido, string dni, int id)
-           : base(nombre, apellido, dni)//public Persona(string nombre, string apellido, string dni)        
+           : base(nombre, apellido, dni)
         {
             this.Id = id;
-            //this.Direccion = default;
-            //this.Telefono = default;
+            this.Direccion = default;
+            this.Telefono = default;
         }
         /// <summary>
         /// constructr que recibe 6 parametros. (completo)
