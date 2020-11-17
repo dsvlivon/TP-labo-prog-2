@@ -30,3 +30,19 @@ C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP
 C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
 C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1 - Calculadora.exe
 C:\Users\Daniel\Documents\DANY\UTN\Programacion-Laboratorio II\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1 - Calculadora.pdb
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\bin\Debug\TP1 - Calculadora.exe.config
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\bin\Debug\TP1 - Calculadora.exe
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\bin\Debug\TP1 - Calculadora.pdb
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\bin\Debug\es-AR\TP1 - Calculadora.resources.dll
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\bin\Debug\Entidades.dll
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\bin\Debug\Entidades.pdb
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1___Calculadora.FormCalculadora.resources
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1___Calculadora.Properties.Resources.resources
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1___Calculadora.FormCalculadora.es-AR.resources
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\es-AR\TP1 - Calculadora.resources.dll
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1 - Calculadora.exe
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP1 - Daniel Vizgarra Livon - Lab_Prog2\TP1 - Calculadora\TP1 - Calculadora\obj\Debug\TP1 - Calculadora.pdb

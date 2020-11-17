@@ -10,7 +10,6 @@ C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\V
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\bin\Debug\Excepciones.pdb
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\bin\Debug\Comun.pdb
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.csprojAssemblyReference.cache
-C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.Form1.resources
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.Properties.Resources.resources
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.csproj.GenerateResource.cache
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.csproj.CoreCompileInputs.cache
@@ -19,3 +18,5 @@ C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\V
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.pdb
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\bin\Debug\Principal.dll
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\bin\Debug\Principal.pdb
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.FrmFactura.resources
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.FrmMenuPrincipal.resources

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Entidades;
 using Excepciones;
 using Comun;
-
+using ClasePrincipal;
 namespace Test
 {
     class Program

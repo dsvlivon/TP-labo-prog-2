@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StockInsuficienteExcepcion.cs" />
     <Compile Include="RepetidoException.cs" />
     <Compile Include="ArchivosException.cs" />
     <Compile Include="CodigoInvalidoException.cs" />

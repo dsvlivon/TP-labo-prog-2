@@ -49,8 +49,8 @@ namespace Entidades
             :base(nombre, apellido, dni)//public Persona(string nombre, string apellido, string dni)        
         {
             this.Id = id;
-            this.Direccion = direccion;
             this.Telefono = telefono;
+            this.Direccion = direccion;
         }
         #endregion
 
@@ -63,7 +63,7 @@ namespace Entidades
             }
             set
             {
-                this.id=value;
+                this.id = value;
             }
         }
         public string Direccion
@@ -74,7 +74,7 @@ namespace Entidades
             }
             set
             {
-                this.direccion = value;//ValidarString(value);
+                this.direccion = value;
             }
         }
         public string Telefono
@@ -85,7 +85,7 @@ namespace Entidades
             }
             set
             {
-                this.direccion = ValidarTelefono(value);
+                this.telefono = ValidarTelefono(value);
             }
         }
         #endregion
