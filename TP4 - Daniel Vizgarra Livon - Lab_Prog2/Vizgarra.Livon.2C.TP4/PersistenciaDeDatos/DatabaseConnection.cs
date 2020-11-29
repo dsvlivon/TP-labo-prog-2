@@ -9,7 +9,7 @@ using Excepciones;
 
 namespace PersistenciaDeDatos 
 {
-    //ACA FALTA ALGO Y NO SE Q ES
+    
     public abstract class DatabaseConnection
     {
         private static SqlConnection conexion;

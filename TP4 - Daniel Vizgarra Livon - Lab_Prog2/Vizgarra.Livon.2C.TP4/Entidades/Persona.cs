@@ -137,7 +137,7 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.AppendFormat("NOMBRE COMPLETO: {0}, {1}\r\n", this.Apellido, this.Nombre);
-            sb.AppendFormat("DNI: {0}\n", this.dni);
+            sb.AppendFormat("DNI: {0}", this.dni);
 
             return sb.ToString();
         }

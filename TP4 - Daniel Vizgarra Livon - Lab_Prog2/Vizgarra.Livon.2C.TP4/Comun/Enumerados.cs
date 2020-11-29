@@ -11,5 +11,9 @@ namespace Comun
     {
         Insert, Update, Delete
     }
-   
+    public enum EAccionesABM
+    {
+        Crear, Modificar, Borrar
+    }
+
 }

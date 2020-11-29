@@ -12,31 +12,39 @@ namespace PersistenciaDeDatos
 {
     public class ProductosDB : DatabaseConnection
     {
-        public delegate void DBDelegate(EAccionesDB accion);
-        public static event DBDelegate DBChanged;
-
-        public static void InsertProducto(string descripcion, double precio)
+        public static void InsertProducto(Producto p)
         {
+            InsertProducto(p.Codigo, p.Descripcion, p.Marca, p.Precio, p.Stock);
+        }
+
+        public static void InsertProducto(int codigo, string descripcion, string marca, double precio, int stock)
+        {//(codigo, descripcion, marca, precio, stock)
+            
             ProductosDB.Comando.CommandText = "INSERT INTO dbo.Productos " +
-                "(codigo, descripcion, familia, precio) VALUES (@codigo, @descripcion, @famiia, @precio);";
-            ProductosDB.Comando.Parameters.Clear();
+                "(descripcion, marca, stock, precio, codigo) VALUES (@descripcion, @marca, @stock, @precio, @codigo);";
+            ProductosDB.Comando.Parameters.AddWithValue("@codigo", codigo);
             ProductosDB.Comando.Parameters.AddWithValue("@descripcion", descripcion);
+            ProductosDB.Comando.Parameters.AddWithValue("@marca", marca);
             ProductosDB.Comando.Parameters.AddWithValue("@precio", precio);
+            ProductosDB.Comando.Parameters.AddWithValue("@stock", stock);
             ProductosDB.Ejecutar();
-            DBChanged.Invoke(EAccionesDB.Insert);
             //invoke del evento q usa un delegado tipo 'ProductoDBDelegate' que recibe un 'enum EAccionesDB'
         }
 
-        public static void UpdateProducto(string descripcion, string marca,int stock, double precio)
+        public static void UpdateProducto(Producto p)
+        {
+            UpdateProducto(p.Codigo, p.Descripcion, p.Marca, p.Precio, p.Stock);
+        }
+
+        public static void UpdateProducto(int codigo, string descripcion, string marca, double precio, int stock)
         {
             ProductosDB.Comando.CommandText = "UPDATE dbo.Productos SET precio = @nuevoPrecio WHERE codigo = @codigo";
             ProductosDB.Comando.Parameters.Clear();
             ProductosDB.Comando.Parameters.AddWithValue("@descripcion", descripcion);
             ProductosDB.Comando.Parameters.AddWithValue("@marca", marca);
-            ProductosDB.Comando.Parameters.AddWithValue("@nuevoPrecio", precio);
+            ProductosDB.Comando.Parameters.AddWithValue("@precio", precio);
             ProductosDB.Comando.Parameters.AddWithValue("@stock", stock);
             ProductosDB.Ejecutar();
-            DBChanged.Invoke(EAccionesDB.Update);
             //invoke del evento q usa un delegado tipo 'ProductoDBDelegate' que recibe un 'enum EAccionesDB'
         }
 
@@ -46,7 +54,6 @@ namespace PersistenciaDeDatos
             ProductosDB.Comando.Parameters.Clear();
             ProductosDB.Comando.Parameters.AddWithValue("@codigo", codigo);
             ProductosDB.Ejecutar();
-            DBChanged.Invoke(EAccionesDB.Delete);
             //invoke del evento q usa un delegado tipo 'ProductoDBDelegate' que recibe un 'enum EAccionesDB'
         }
 
@@ -64,11 +71,11 @@ namespace PersistenciaDeDatos
                 { 
                     while (sqlReader.Read())
                     {
-                        int codigo = Convert.ToInt32(sqlReader["codigo"]);
                         string descripcion = sqlReader["descripcion"].ToString();
                         string marca = sqlReader["marca"].ToString();
-                        double precio = Convert.ToDouble(sqlReader["precio"]);
                         int stock = Convert.ToInt32(sqlReader["stock"]);
+                        double precio = Convert.ToDouble(sqlReader["precio"]);
+                        int codigo = Convert.ToInt32(sqlReader["codigo"]);
                         Producto producto = new Producto(codigo, descripcion, marca, precio, stock);
                         productosList.Add(producto);
                     }

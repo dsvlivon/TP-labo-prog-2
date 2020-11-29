@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Comun
 {
-    public interface IArchivoTexto
+    interface IFactura <T>
     {
-        string Texto { get; }
-        string Ruta { get; }
+        void GuardarFactura(string nombreArchivo, T objeto);
     }
 }

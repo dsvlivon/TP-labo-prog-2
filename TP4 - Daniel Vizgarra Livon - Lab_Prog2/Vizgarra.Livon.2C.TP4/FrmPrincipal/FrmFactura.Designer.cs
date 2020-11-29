@@ -28,48 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTimer2 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.lblCli = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblDir = new System.Windows.Forms.Label();
-            this.lblIva = new System.Windows.Forms.Label();
+            this.lblLeyendaIva = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblNombreCliente = new System.Windows.Forms.Label();
-            this.lblTelefono = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.lblNumeroCliente = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
-            this.lblNeto = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblNombreCliente = new System.Windows.Forms.Label();
+            this.lblLeyendaNeto = new System.Windows.Forms.Label();
             this.rtbListadoOC = new System.Windows.Forms.RichTextBox();
             this.lblNetoGravado = new System.Windows.Forms.Label();
-            this.lblTot = new System.Windows.Forms.Label();
-            this.lblNumeroCliente = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblleyendaTotal = new System.Windows.Forms.Label();
             this.lblIvaTotal = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblTimer2
+            // lblTimer
             // 
-            this.lblTimer2.AutoSize = true;
-            this.lblTimer2.Location = new System.Drawing.Point(167, 11);
-            this.lblTimer2.Name = "lblTimer2";
-            this.lblTimer2.Size = new System.Drawing.Size(33, 13);
-            this.lblTimer2.TabIndex = 1;
-            this.lblTimer2.Text = "Timer";
-            this.lblTimer2.Click += new System.EventHandler(this.lblTimer2_Click);
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Location = new System.Drawing.Point(8, 16);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(31, 13);
+            this.lblTimer.TabIndex = 1;
+            this.lblTimer.Text = "--:--:--";
             // 
             // lblCli
             // 
@@ -102,20 +103,20 @@
             // lblDir
             // 
             this.lblDir.AutoSize = true;
-            this.lblDir.Location = new System.Drawing.Point(170, 119);
+            this.lblDir.Location = new System.Drawing.Point(215, 119);
             this.lblDir.Name = "lblDir";
             this.lblDir.Size = new System.Drawing.Size(55, 13);
             this.lblDir.TabIndex = 0;
             this.lblDir.Text = "Dirección:";
             // 
-            // lblIva
+            // lblLeyendaIva
             // 
-            this.lblIva.AutoSize = true;
-            this.lblIva.Location = new System.Drawing.Point(155, 383);
-            this.lblIva.Name = "lblIva";
-            this.lblIva.Size = new System.Drawing.Size(57, 13);
-            this.lblIva.TabIndex = 0;
-            this.lblIva.Text = "IVA. Total:";
+            this.lblLeyendaIva.AutoSize = true;
+            this.lblLeyendaIva.Location = new System.Drawing.Point(169, 383);
+            this.lblLeyendaIva.Name = "lblLeyendaIva";
+            this.lblLeyendaIva.Size = new System.Drawing.Size(57, 13);
+            this.lblLeyendaIva.TabIndex = 0;
+            this.lblLeyendaIva.Text = "IVA. Total:";
             // 
             // groupBox2
             // 
@@ -126,6 +127,16 @@
             this.groupBox2.Size = new System.Drawing.Size(128, 40);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(33, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 20);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Factura";
             // 
             // label9
             // 
@@ -151,19 +162,49 @@
             this.groupBox1.Controls.Add(this.lblDir);
             this.groupBox1.Location = new System.Drawing.Point(3, -2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(375, 140);
+            this.groupBox1.Size = new System.Drawing.Size(422, 140);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.label18);
+            this.groupBox4.Controls.Add(this.lblTimer);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Location = new System.Drawing.Point(130, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(292, 85);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 29);
+            this.label5.Location = new System.Drawing.Point(6, 42);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 20);
+            this.label5.Size = new System.Drawing.Size(94, 20);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Tienda Damian ";
+            this.label5.Text = "Tienda XXX";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(149, 168);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Cliente n°:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 68);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(155, 13);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Artículos de Higiene y Limpieza";
             // 
             // groupBox3
             // 
@@ -184,108 +225,14 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Cliente n°:";
             // 
-            // label11
+            // label20
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(33, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 20);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Factura";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 55);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(155, 13);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Artículos de Higiene y Limpieza";
-            // 
-            // lblNombreCliente
-            // 
-            this.lblNombreCliente.AutoSize = true;
-            this.lblNombreCliente.Location = new System.Drawing.Point(272, 93);
-            this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(22, 13);
-            this.lblNombreCliente.TabIndex = 0;
-            this.lblNombreCliente.Text = "xxx";
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(65, 119);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(22, 13);
-            this.lblTelefono.TabIndex = 0;
-            this.lblTelefono.Text = "xxx";
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(272, 119);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(22, 13);
-            this.lblDireccion.TabIndex = 0;
-            this.lblDireccion.Text = "xxx";
-            // 
-            // lblNeto
-            // 
-            this.lblNeto.AutoSize = true;
-            this.lblNeto.Location = new System.Drawing.Point(7, 383);
-            this.lblNeto.Name = "lblNeto";
-            this.lblNeto.Size = new System.Drawing.Size(77, 13);
-            this.lblNeto.TabIndex = 0;
-            this.lblNeto.Text = "Neto Gravado:";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Controls.Add(this.lblTimer2);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Location = new System.Drawing.Point(130, 0);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(257, 85);
-            this.groupBox4.TabIndex = 5;
-            this.groupBox4.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(149, 168);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 13);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Cliente n°:";
-            // 
-            // rtbListadoOC
-            // 
-            this.rtbListadoOC.Location = new System.Drawing.Point(2, 140);
-            this.rtbListadoOC.Name = "rtbListadoOC";
-            this.rtbListadoOC.Size = new System.Drawing.Size(373, 237);
-            this.rtbListadoOC.TabIndex = 3;
-            this.rtbListadoOC.Text = "";
-            this.rtbListadoOC.TextChanged += new System.EventHandler(this.rtbListadoOC_TextChanged);
-            // 
-            // lblNetoGravado
-            // 
-            this.lblNetoGravado.AutoSize = true;
-            this.lblNetoGravado.Location = new System.Drawing.Point(82, 383);
-            this.lblNetoGravado.Name = "lblNetoGravado";
-            this.lblNetoGravado.Size = new System.Drawing.Size(22, 13);
-            this.lblNetoGravado.TabIndex = 0;
-            this.lblNetoGravado.Text = "xxx";
-            // 
-            // lblTot
-            // 
-            this.lblTot.AutoSize = true;
-            this.lblTot.Location = new System.Drawing.Point(288, 383);
-            this.lblTot.Name = "lblTot";
-            this.lblTot.Size = new System.Drawing.Size(45, 13);
-            this.lblTot.TabIndex = 0;
-            this.lblTot.Text = "TOTAL:";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(215, 93);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(95, 13);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Apellido y Nombre:";
             // 
             // lblNumeroCliente
             // 
@@ -296,19 +243,73 @@
             this.lblNumeroCliente.TabIndex = 0;
             this.lblNumeroCliente.Text = "xxx";
             // 
-            // label20
+            // lblDireccion
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(170, 93);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(95, 13);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Apellido y Nombre:";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(317, 119);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(22, 13);
+            this.lblDireccion.TabIndex = 0;
+            this.lblDireccion.Text = "xxx";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(65, 119);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(22, 13);
+            this.lblTelefono.TabIndex = 0;
+            this.lblTelefono.Text = "xxx";
+            // 
+            // lblNombreCliente
+            // 
+            this.lblNombreCliente.AutoSize = true;
+            this.lblNombreCliente.Location = new System.Drawing.Point(317, 93);
+            this.lblNombreCliente.Name = "lblNombreCliente";
+            this.lblNombreCliente.Size = new System.Drawing.Size(22, 13);
+            this.lblNombreCliente.TabIndex = 0;
+            this.lblNombreCliente.Text = "xxx";
+            // 
+            // lblLeyendaNeto
+            // 
+            this.lblLeyendaNeto.AutoSize = true;
+            this.lblLeyendaNeto.Location = new System.Drawing.Point(7, 383);
+            this.lblLeyendaNeto.Name = "lblLeyendaNeto";
+            this.lblLeyendaNeto.Size = new System.Drawing.Size(77, 13);
+            this.lblLeyendaNeto.TabIndex = 0;
+            this.lblLeyendaNeto.Text = "Neto Gravado:";
+            // 
+            // rtbListadoOC
+            // 
+            this.rtbListadoOC.Location = new System.Drawing.Point(2, 140);
+            this.rtbListadoOC.Name = "rtbListadoOC";
+            this.rtbListadoOC.Size = new System.Drawing.Size(423, 237);
+            this.rtbListadoOC.TabIndex = 3;
+            this.rtbListadoOC.Text = "";
+           
+            // 
+            // lblNetoGravado
+            // 
+            this.lblNetoGravado.AutoSize = true;
+            this.lblNetoGravado.Location = new System.Drawing.Point(82, 383);
+            this.lblNetoGravado.Name = "lblNetoGravado";
+            this.lblNetoGravado.Size = new System.Drawing.Size(22, 13);
+            this.lblNetoGravado.TabIndex = 0;
+            this.lblNetoGravado.Text = "xxx";
+            // 
+            // lblleyendaTotal
+            // 
+            this.lblleyendaTotal.AutoSize = true;
+            this.lblleyendaTotal.Location = new System.Drawing.Point(323, 383);
+            this.lblleyendaTotal.Name = "lblleyendaTotal";
+            this.lblleyendaTotal.Size = new System.Drawing.Size(45, 13);
+            this.lblleyendaTotal.TabIndex = 0;
+            this.lblleyendaTotal.Text = "TOTAL:";
             // 
             // lblIvaTotal
             // 
             this.lblIvaTotal.AutoSize = true;
-            this.lblIvaTotal.Location = new System.Drawing.Point(210, 383);
+            this.lblIvaTotal.Location = new System.Drawing.Point(224, 383);
             this.lblIvaTotal.Name = "lblIvaTotal";
             this.lblIvaTotal.Size = new System.Drawing.Size(22, 13);
             this.lblIvaTotal.TabIndex = 0;
@@ -317,47 +318,53 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(331, 383);
+            this.lblTotal.Location = new System.Drawing.Point(366, 383);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(22, 13);
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "xxx";
             // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // FrmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 402);
+            this.ClientSize = new System.Drawing.Size(426, 402);
             this.Controls.Add(this.rtbListadoOC);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.lblTot);
+            this.Controls.Add(this.lblleyendaTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblNetoGravado);
-            this.Controls.Add(this.lblIva);
+            this.Controls.Add(this.lblLeyendaIva);
             this.Controls.Add(this.lblIvaTotal);
-            this.Controls.Add(this.lblNeto);
+            this.Controls.Add(this.lblLeyendaNeto);
+            this.MaximizeBox = false;
             this.Name = "FrmFactura";
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Factura";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblTimer2;
+        private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Label lblCli;
         private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblDir;
-        private System.Windows.Forms.Label lblIva;
+        private System.Windows.Forms.Label lblLeyendaIva;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -369,9 +376,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label lblNeto;
+        private System.Windows.Forms.Label lblLeyendaNeto;
         private System.Windows.Forms.Label lblNetoGravado;
-        private System.Windows.Forms.Label lblTot;
+        private System.Windows.Forms.Label lblleyendaTotal;
         private System.Windows.Forms.Label lblIvaTotal;
         private System.Windows.Forms.Label lblTotal;
         public System.Windows.Forms.RichTextBox rtbListadoOC;
@@ -379,5 +386,6 @@
         public System.Windows.Forms.Label lblNumeroCliente;
         public System.Windows.Forms.Label lblDireccion;
         public System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Timer timer;
     }
 }

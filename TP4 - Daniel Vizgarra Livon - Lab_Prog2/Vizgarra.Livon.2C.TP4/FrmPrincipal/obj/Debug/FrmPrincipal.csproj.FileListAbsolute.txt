@@ -20,3 +20,4 @@ C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\V
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\bin\Debug\Principal.pdb
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.FrmFactura.resources
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.FrmMenuPrincipal.resources
+C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\FrmPrincipal\obj\Debug\FrmPrincipal.FrmAbmProductos.resources

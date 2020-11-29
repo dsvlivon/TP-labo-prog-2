@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Comun
 {
-    public static class ExtensionNumerica
+    public static class MetodosDeExtension
     {
         public static string FormatearPrecio(this Double valor)
         {
-            return String.Format("${0:0.00}", valor);
+            return String.Format("{0:0.00}$", valor);
         }
     }
 }

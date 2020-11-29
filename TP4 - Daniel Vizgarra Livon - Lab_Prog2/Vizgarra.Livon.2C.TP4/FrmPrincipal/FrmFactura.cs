@@ -19,27 +19,21 @@ namespace FrmPrincipal
         public FrmFactura(Negocio negocio, Cliente cliente)
         {
             InitializeComponent();
-            lblTimer2.Enabled = true;
+            timer.Enabled = true;
             lblNumeroCliente.Text = cliente.Id.ToString();
-            lblNombreCliente.Text = cliente.Apellido +", "+ cliente.Nombre;
+            lblNombreCliente.Text = cliente.Apellido + ", " + cliente.Nombre;
             lblTelefono.Text = cliente.Telefono;
             lblDireccion.Text = cliente.Direccion;
 
-            lblNetoGravado.Text = negocio.Neto.ToString();
-            lblIvaTotal.Text = negocio.Iva.ToString();
-            lblTotal.Text = negocio.Total.ToString();
             rtbListadoOC.Text = negocio.GenerarFactura();
-
+            lblIvaTotal.Text = negocio.Iva.ToString();
+            lblNetoGravado.Text = negocio.Neto.ToString();
+            lblTotal.Text = negocio.Total.ToString();
         }
 
-        private void rtbListadoOC_TextChanged(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
-           
-        }
-
-        private void lblTimer2_Click(object sender, EventArgs e)
-        {
-            lblTimer2.Text = DateTime.Now.ToString();
+            lblTimer.Text = DateTime.Now.ToString();
         }
     }
 }

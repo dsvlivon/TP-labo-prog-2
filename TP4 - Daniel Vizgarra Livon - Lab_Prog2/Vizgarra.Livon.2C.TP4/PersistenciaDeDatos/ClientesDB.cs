@@ -12,49 +12,7 @@ namespace PersistenciaDeDatos
 {
     public class ClientesDB : DatabaseConnection
     {
-        public delegate void DBDelegate(EAccionesDB accion);
-        public static event DBDelegate DBChanged;
-
-        public static void InsertCliente(int id, string nombre, string apellido, string dni, string direccion, string telefono)
-        {
-            ClientesDB.Comando.CommandText = "INSERT INTO dbo.Clientes " +
-
-                "(id, nombre, apellido, dni, descripcion, telefono, dni) VALUES (@id, @nombre, @apellido, @dni, @direccion, @telefono);";
-            ClientesDB.Comando.Parameters.Clear();
-            ClientesDB.Comando.Parameters.AddWithValue("@id", id);
-            ClientesDB.Comando.Parameters.AddWithValue("@nombre", nombre);
-            ClientesDB.Comando.Parameters.AddWithValue("@apellido", apellido);
-            ClientesDB.Comando.Parameters.AddWithValue("@dni", dni);
-            ClientesDB.Comando.Parameters.AddWithValue("@descripcion", direccion);
-            ClientesDB.Comando.Parameters.AddWithValue("@telefono", telefono);
-            ClientesDB.Ejecutar();
-            DBChanged.Invoke(EAccionesDB.Insert);
-            //invoke del evento del tipo ProductoDBDelegate que recibe un enum EAccionesDB
-        }
-
-        public static void UpdateProducto(string nombre, string apellido, string dni, string direccion, string telefono)
-        {
-            ClientesDB.Comando.CommandText = "UPDATE dbo.Productos SET precio = @nuevoPrecio WHERE codigo = @codigo";
-            ClientesDB.Comando.Parameters.Clear();
-            ClientesDB.Comando.Parameters.AddWithValue("@nombre", nombre);
-            ClientesDB.Comando.Parameters.AddWithValue("@apellido", apellido);
-            ClientesDB.Comando.Parameters.AddWithValue("@dni", dni);
-            ClientesDB.Comando.Parameters.AddWithValue("@descripcion", direccion);
-            ClientesDB.Comando.Parameters.AddWithValue("@telefono", telefono);
-            ClientesDB.Ejecutar();
-            DBChanged.Invoke(EAccionesDB.Update);
-            //invoke del evento del tipo ClientesDBDelegate que recibe un enum EAccionesDB
-        }
-
-        public static void DeleteProducto(int id)
-        {
-            ClientesDB.Comando.CommandText = "DELETE FROM dbo.Productos WHERE id = @id";
-            ClientesDB.Comando.Parameters.Clear();
-            ClientesDB.Comando.Parameters.AddWithValue("@id", id);
-            ClientesDB.Ejecutar();
-            DBChanged.Invoke(EAccionesDB.Delete);
-        }
-
+      
         public static List<Cliente> SelectAll()
         {
             List<Cliente> clientesLista = new List<Cliente>();

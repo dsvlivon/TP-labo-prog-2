@@ -10,16 +10,41 @@ using System.Windows.Forms;
 using Entidades;
 using PersistenciaDeDatos;
 using ClasePrincipal;
+using Comun;
 
 
 namespace FrmPrincipal
 {
     public partial class FrmMenuPrincipal : Form
     {
+        //public delegate void ManejoInformacion(Negocio negocio);
+        //public static ManejoInformacion EventoTransferir;
+
         Negocio negocio = new Negocio();//esto m da 3 listas, productos,clientes y ventas
         Cliente cliente;
 
-        public Cliente ClienteForm { get { return this.cliente; } set { this.cliente = value; } }
+        public Cliente Cliente 
+        { 
+            get 
+            { 
+                return this.cliente; 
+            } 
+            set 
+            { 
+                this.cliente = value; 
+            } 
+        }
+        public Negocio Negocio
+        {
+            get
+            {
+                return this.negocio;
+            }
+            set
+            {
+                this.negocio = value;
+            }
+        }
 
         public FrmMenuPrincipal()
         {
@@ -35,12 +60,14 @@ namespace FrmPrincipal
             cmbArticulo.DisplayMember = "descripcion";
             cmbArticulo.ValueMember = "codigo";
             cmbArticulo.DataSource = negocio.Productos;
-            cmbArticuloGP.DisplayMember = "descripcion";
-            cmbArticuloGP.ValueMember = "codigo";
-            cmbArticuloGP.DataSource = negocio.Productos;
+            //EventoTransferir += TransferirDatos;
+        }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            lblTimer.Text = DateTime.Now.ToString();
         }
 
-
+        #region ManejoDeCliente
         private void cmbNumeroCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (Cliente item in negocio.Clientes)
@@ -55,29 +82,27 @@ namespace FrmPrincipal
                 }
             }
         }
+        #endregion
 
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            lblTimer.Text = DateTime.Now.ToString();
-        }
 
         private void cmbArticulo_SelectedIndexChanged(object sender, EventArgs e)
         {          
             foreach (Producto item in negocio.Productos)
             {
-                if (item.Codigo == (int)cmbArticulo.SelectedValue)
+                if (item.Codigo== (int)cmbArticulo.SelectedValue)
                 {
+                    //string x = cmbArticulo.SelectedValue.ToString(); ;
                     txtCodigo.Text = item.Codigo.ToString();
                     txtPrecio.Text = item.Precio.ToString();
                     txtStock.Text = item.Stock.ToString();
+                    nudCantidad.Maximum = item.Stock;
                     break;
                 }
             }
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            int cantidad;
-            if (int.TryParse(this.txtCantidad.Text, out cantidad))
+            if (int.TryParse(nudCantidad.Value.ToString(), out int cantidad))
             {
                 foreach (Producto item in negocio.Productos)
                 {
@@ -89,17 +114,13 @@ namespace FrmPrincipal
                     }
                 }
                 rtbOrdenDeCompra.Text = negocio.ListarVentas();
-                lblTotalAcumulado.Text = String.Format("{0}$", negocio.Total); ;
+                lblTotalAcumulado.Text = String.Format("{0}$", negocio.Neto); ;
             }
         }
-
         private void btnGenerarFc_Click(object sender, EventArgs e)
         {
-            //se envian 2 dto "data transfer object"
             FrmFactura frm = new FrmFactura(negocio, cliente);
-            DialogResult resultado = frm.ShowDialog();          
-           
-           
+            DialogResult resultado = frm.ShowDialog();                    
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -109,18 +130,26 @@ namespace FrmPrincipal
             lblTotalAcumulado.Text = String.Format("{0}$", negocio.Total);
         }
 
-        private void cmbArticuloGP_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            foreach (Producto item in negocio.Productos)
-            {
-                if (item.Codigo == (int)cmbArticuloGP.SelectedValue)
-                {
-                    txtCodigo.Text = item.Codigo.ToString();
-                    txtPrecio.Text = item.Precio.ToString();
-                    txtStock.Text = item.Stock.ToString();
-                    break;
-                }
-            }
+           
+        private void btnCrearArticulo_Click(object sender, EventArgs e)
+        {//puedo llamar el frm igual q el FrmFactura cada evento tiene scope local
+            FrmAbmProductos frm = new FrmAbmProductos(negocio,EAccionesABM.Crear);
+            DialogResult resultado = frm.ShowDialog();
+            
         }
+
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            FrmAbmProductos frm = new FrmAbmProductos(negocio, EAccionesABM.Modificar);
+            DialogResult resultado = frm.ShowDialog();
+        }
+
+        private void btnBorrarArticulo_Click(object sender, EventArgs e)
+        {
+            FrmAbmProductos frm = new FrmAbmProductos(negocio, EAccionesABM.Borrar);
+            DialogResult resultado = frm.ShowDialog();
+        }
+        
+
     }
 }

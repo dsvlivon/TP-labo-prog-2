@@ -18,55 +18,38 @@ namespace Test
             {
                 Console.WriteLine("              TEST\n" + "Impresión de pruebas del sistema:\n" + "---------------------------------\n");
 
-                #region Testeos De Excepciones
-                /*
-                try
-                {
-                    Cliente cPrueba = new Cliente("Daniel", "Vizgarra", "3x3456789", 1, "Alvear 123", "4244-4444");
-                }
-                catch (DniInvalidoExcepcion ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                try
-                {
-                    Producto pPrueba = new Producto(102, "Desinfectactante !", "Espadol", 125.35, 50);
-                }
-                catch (StringInvalidoException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                } */
-                #endregion
-
-
+                Negocio negocioPrueba = new Negocio();//al instanciar un objeto negocio, las 3 listas q tiene cargan los datos de la db                
+                
                 #region CargaDePrueba
-                Negocio negocioDamian = new Negocio();
-                Producto p1 = new Producto(100, "Alcohol", "As");
-                Producto p2 = new Producto(102, "Desinfectactante", "Unilever", 125.35);
-                Producto p3 = new Producto(101, "Detergente", "Magistral", 175.00, 20);
+                Cliente c1 = new Cliente("Diego", "Maradona", "33456789", 1001, "French 123", "4244-4444");
+                Cliente c2 = new Cliente("Cliente de Prueba", "xxx", "33123456", 1111, "Berutti 456", "15 4244-5555");
+                //Cliente cPrueba = new Cliente("Daniel", "Vizgarra", "3x3456789", 1031, "Alvear 123", "4244-4444");//erróneo
+
+                negocioPrueba += c1;
+                negocioPrueba += c2;
+                Console.WriteLine(negocioPrueba.ListarClientes());
+                negocioPrueba.Clientes.Remove(c2);
+                Console.WriteLine("Remuevo el cliente de prueba\n");
+                Console.WriteLine(negocioPrueba.ListarClientes());
+
+                Producto p1 = new Producto(1002, "Desinfectactante", "Unilever", 125.35);
+                Producto p2 = new Producto(1000, "Producto de Prueba", "xxx");
+                //Producto pPrueba = new Producto(102, "Desinfectactante !", "Espadol", 125.35, 50);//erróneo  
+
+                negocioPrueba += p1;
+                negocioPrueba += p2;
+                Console.WriteLine(negocioPrueba.ListarProductos());
+                negocioPrueba -= p2;
+                Console.WriteLine("Remuevo el producto de prueba\n");
+                Console.WriteLine(negocioPrueba.ListarProductos());
+
+                negocioPrueba.Vender(p1,3);
+                negocioPrueba.Vender(p2, 4);
                 
+                Console.WriteLine(negocioPrueba.ListarVentas());      
 
-                Cliente c1 = new Cliente("Federico", "Davila", "33456789", 1, "French 123", "4244-4444");
-                Cliente c2 = new Cliente("Mauricio", "Ceriza", "33123456", 2, "Berutti 456", "4244-5555");
-                Cliente c3 = new Cliente("daniel", "Vizgarra", "35123456", 10, "alasd 1", "+54 11 4244-1111");
-               
-                negocioDamian += c1;
-                negocioDamian += c2;
-                negocioDamian += c3;
-                foreach (Cliente c in negocioDamian.Clientes)
-                {
-                    Console.WriteLine(c.ToString());
-                }
-                negocioDamian += p1;
-                negocioDamian += p2;
-                negocioDamian += p3;
-
-                foreach (Producto p in negocioDamian.Productos)
-                {
-                    Console.WriteLine(p.ToString());
-                }
                 #endregion
-                
+
                 #region ManejoDeArchivo
                 /*
                 try
@@ -81,12 +64,36 @@ namespace Test
                 }
                 */
                 #endregion
-                
+
             }
+            catch (DniInvalidoExcepcion ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Dni invalido"+"Presione una tecla p continuar");
+                Console.ReadKey();
+            }
+            catch (TelefonoInvalidoException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Telefono invalido" + "Presione una tecla p continuar");
+                Console.ReadKey();
+            }
+            catch (RepetidoException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Repetido" + "Presione una tecla p continuar");
+                Console.ReadKey();
+            }
+            catch (StringInvalidoException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("stringInvalid"+"Presione una tecla p continuar");
+                Console.ReadKey();
+            } /*
             catch (Exception ex)
             {
                 Console.WriteLine("SE PUDRIO LA MOMIA!!! : " + ex.Message);
-            }
+            }*/
             Console.ReadKey();
         }
     }

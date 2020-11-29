@@ -41,11 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Delegados.cs" />
     <Compile Include="Enumerados.cs" />
     <Compile Include="ExtensionGuardarString.cs" />
-    <Compile Include="ExtensionNumerica.cs" />
-    <Compile Include="Interfaces.cs" />
+    <Compile Include="IFactura.cs" />
+    <Compile Include="MetodosDeExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

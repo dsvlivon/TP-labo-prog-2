@@ -24,7 +24,7 @@ namespace Entidades
         {
             
         }
-
+        
         public Producto(int codigo, string descripcion, string marca)
         {
             this.codigo = codigo;
@@ -43,6 +43,13 @@ namespace Entidades
         public Producto(int codigo, string descripcion, string marca, double precio, int stock)
             : this(codigo, descripcion, marca, precio)
         {
+            this.stock = stock;
+        }
+        public Producto(string descripcion, string marca,double precio, int stock)
+        {
+            this.descripcion = descripcion;
+            this.marca = marca;
+            this.precio = precio;
             this.stock = stock;
         }
 
@@ -119,12 +126,17 @@ namespace Entidades
         /// <summary>
         /// Código del producto en la base de datos (PK). 
         /// Propiedad de sólo lectura. 
-        /// </summary>
+        /// </summary>  
+       
         public int Codigo
         {
             get
             {
                 return this.codigo;
+            }
+            set
+            {
+                this.codigo = value;
             }
         }
         #endregion
@@ -139,7 +151,7 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(String.Format("Código: {0}", this.Codigo));
             sb.AppendLine(String.Format("Descripción: {0}", this.Descripcion));
-            sb.AppendLine(String.Format("Familia: {0}", this.marca));
+            sb.AppendLine(String.Format("Marca: {0}", this.marca));
             sb.AppendLine(String.Format("Precio: ${0:0.00}", this.Precio));
             sb.AppendLine(String.Format("Stock: {0} unidades", this.Stock));
 
@@ -157,11 +169,9 @@ namespace Entidades
             {
                 throw new StringInvalidoException();
             }
-        }
+        }      
 
-        
-
-        private int ValidarCodigo(string value)
+        public int ValidarCodigo(string value)
         {
             int aux;
             Regex reg = new Regex(@"^[0-9]+$");
