@@ -44,7 +44,6 @@
     <Compile Include="StockInsuficienteExcepcion.cs" />
     <Compile Include="RepetidoException.cs" />
     <Compile Include="ArchivosException.cs" />
-    <Compile Include="CodigoInvalidoException.cs" />
     <Compile Include="TelefonoInvalidoException.cs" />
     <Compile Include="DniInvalidoExcepcion.cs" />
     <Compile Include="StringInvalidoException.cs" />
