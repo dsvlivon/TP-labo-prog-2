@@ -4,11 +4,28 @@ using Entidades;
 using ClasePrincipal;
 using Excepciones;
 
+
 namespace UnitTest
 {
     [TestClass]
     public class TestUnitarios
     {
+        [TestMethod]
+        public void DosclientesIguales()
+        {
+            //arrange
+            bool resultado = false;
+            Cliente c1 = new Cliente("Diego", "Maradona", "33456789", 1001, "French 123", "4244-4444");
+            Cliente c2 = new Cliente("Lionel", "Messi", "33456789", 1001, "French 123", "4244-4444");
+            //act
+            if (c1 == c2)
+            {
+                resultado = true;
+            }
+            //assert
+            Assert.IsTrue(resultado);
+        }
+
         [TestMethod]
         public void TestCargaListaDB()
         {
@@ -25,6 +42,8 @@ namespace UnitTest
             // assert
             Assert.IsTrue(resultado);
         }
+
+        [TestMethod]
         public void CargarListaVentas()
         {
             //arrange
@@ -39,32 +58,8 @@ namespace UnitTest
             {
                 resultado = true;
             }
-
             // assert
             Assert.IsTrue(resultado);
-        }
-
-        public void DosclientesIguales()
-        {
-            //arrange
-            bool resultado = false;
-            Cliente c1 = new Cliente("Diego", "Maradona", "33456789", 1001, "French 123", "4244-4444");
-            Cliente c2 = new Cliente("Cliente de Prueba", "xxx", "33123456", 1111, "Berutti 456", "15 4244-5555");
-
-            //act
-            try
-            {
-                if (c1 == c2)
-                {
-                    resultado = true;
-                }
-            }
-            catch (RepetidoException ex)
-            {
-                resultado = true;
-            }
-            //assert
-            Assert.IsTrue(resultado);
-        }
+        }        
     }
 }

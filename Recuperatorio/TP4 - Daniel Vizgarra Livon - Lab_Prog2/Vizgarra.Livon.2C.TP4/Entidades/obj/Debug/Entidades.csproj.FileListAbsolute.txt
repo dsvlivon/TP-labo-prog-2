@@ -9,3 +9,14 @@ C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\V
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\obj\Debug\Entidades.dll
 C:\Users\Daniel\Desktop\TP-labo-prog-2\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\bin\Debug\Entidades.dll
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\bin\Debug\Comun.dll
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\bin\Debug\Excepciones.dll
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\bin\Debug\Comun.pdb
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\bin\Debug\Excepciones.pdb
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\obj\Debug\Entidades.dll
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Entidades\obj\Debug\Entidades.pdb
