@@ -8,6 +8,7 @@ using Entidades;
 using Excepciones;
 using Comun;
 using ClasePrincipal;
+using PersistenciaDeDatos;
 
 namespace Test
 {
@@ -19,12 +20,12 @@ namespace Test
             {
                 Console.WriteLine("              TEST\n" + "Impresión de pruebas del sistema:\n" + "---------------------------------\n");
 
-                Negocio negocioPrueba = new Negocio();//al instanciar un objeto negocio, las 3 listas q tiene cargan los datos de la db                
-                
+                Negocio negocioPrueba = new Negocio();
+                //al instanciar un objeto negocio, las 3 listas q tiene cargan los datos de la db                
+
                 #region CargaDePrueba
                 Cliente c1 = new Cliente("Diego", "Maradona", "33456789", 1001, "French 123", "4244-4444");
                 Cliente c2 = new Cliente("Cliente de Prueba", "xxx", "33123456", 1111, "Berutti 456", "15 4244-5555");
-                //Cliente cPrueba = new Cliente("Daniel", "Vizgarra", "3x3456789", 1031, "Alvear 123", "4244-4444");//erróneo
 
                 negocioPrueba += c1;
                 negocioPrueba += c2;
@@ -35,7 +36,6 @@ namespace Test
 
                 Producto p1 = new Producto(1002, "Desinfectactante", "Unilever", 125.35);
                 Producto p2 = new Producto(1000, "Producto de Prueba", "xxx");
-                //Producto pPrueba = new Producto(102, "Desinfectactante !", "Espadol", 125.35, 50);//erróneo  
 
                 negocioPrueba += p1;
                 negocioPrueba += p2;
@@ -44,26 +44,27 @@ namespace Test
                 Console.WriteLine("Remuevo el producto de prueba\n");
                 Console.WriteLine(negocioPrueba.ListarProductos());
 
-                negocioPrueba.Vender(p1,c1, 3);
-                negocioPrueba.Vender(p2,c1, 4);
-                
-                Console.WriteLine(negocioPrueba.ListarVentas());      
+                negocioPrueba.Vender(p1, c1, 3);
+                negocioPrueba.Vender(p2, c1, 4);
+
+                Console.WriteLine(negocioPrueba.ListarVentas());
 
                 #endregion
 
                 #region ManejoDeArchivo
-                /*
+                string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 try
                 {
-                    //Guardar(this string texto, string archivo)
-                    //Negocio.Guardar(this.GenerarFactura(),"backup.txt");
-                    Console.WriteLine("Archivo de Negocio guardado.");
+                    Serializador<Producto>.GuardarTxt(ruta, negocioPrueba.ListarProductos(), "txt Prueba");
+                    Console.WriteLine("Archivo TXT guardado.");
+
+                    Serializador<Producto>.SerializarAXml(p1, ruta, "xml Prueba");
+                        Console.WriteLine("Archivo XML guardado.");
                 }
                 catch (ArchivosException ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("Problema en archivos"+ex.Message);
                 }
-                */
                 #endregion
 
             }

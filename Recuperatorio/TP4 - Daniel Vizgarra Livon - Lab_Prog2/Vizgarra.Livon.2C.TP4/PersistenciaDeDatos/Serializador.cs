@@ -16,17 +16,19 @@ namespace PersistenciaDeDatos
     /// <typeparam name="T"> sea de clase y tengo un constructor </typeparam>
     public static class Serializador<T> where T : class, new()
     {
+        #region Xml
         /// <summary>
-        /// 
+        /// Metodo estático para serializar un objeto tipo T genérico en la ruta especifícada
         /// </summary>
         /// <param name="objeto"></param>
         /// <param name="ruta"></param>
-        public static void SerializarAXml(T objeto, string ruta)
+        public static void SerializarAXml(T objeto, string ruta, string nombre)
         {
             XmlTextWriter writer = null;
+            string rutaAbsoluta = ruta + @"\" + nombre + ".xml";
             try
             {
-                writer = new XmlTextWriter(ruta, Encoding.UTF8);
+                writer = new XmlTextWriter(rutaAbsoluta, Encoding.UTF8);
                 XmlSerializer serializer = new XmlSerializer(typeof(T));
                 serializer.Serialize(writer, objeto);
             }
@@ -79,5 +81,63 @@ namespace PersistenciaDeDatos
 
             return objeto;
         }
+        #endregion
+
+
+        #region Txt
+        /// <summary>
+        /// Metodo para LEER un string en formato txt de la ruta especificada
+        /// </summary>
+        /// <param name="ruta"></param>
+        /// <param name="nombre"></param>
+        /// <returns> retorna el texto leído formateado con salots de linea. </returns>
+        public static string LeerTxt(string ruta, string nombre)
+        {
+            StreamReader streamRead = null;
+            try
+            {
+                streamRead = new StreamReader(ruta);
+                string text = string.Empty;
+                string newLine = streamRead.ReadLine();
+                while (newLine != null)
+                {
+                    text += newLine + "\n";
+                    newLine = streamRead.ReadLine();
+                }
+                return text;
+            }
+            finally
+            {
+                if (streamRead != null)
+                {
+                    streamRead.Close();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Método estático para guardar un archivo txt en la ruta especificada
+        /// </summary>
+        /// <param name="ruta"></param>
+        /// <param name="texto"></param>
+        /// <param name="nombre"></param>
+        public static void GuardarTxt(string ruta, string texto, string nombre)
+        {
+            StreamWriter streamWriter = null;
+            string rutaAbsoluta = ruta + @"\" + nombre + ".txt";
+            try
+            {
+                streamWriter = new StreamWriter(rutaAbsoluta, false);
+                streamWriter.WriteLine(texto);
+            }
+            finally
+            {
+                if (streamWriter != null)
+                {
+                    streamWriter.Close();
+                }
+            }
+        }
+        #endregion
     }
 }

@@ -9,3 +9,4 @@ C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon
 C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Comun\obj\Debug\Comun.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Comun\obj\Debug\Comun.dll
 C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Comun\obj\Debug\Comun.pdb
+C:\Users\Daniel\Desktop\TP-labo-prog-2\Recuperatorio\TP4 - Daniel Vizgarra Livon - Lab_Prog2\Vizgarra.Livon.2C.TP4\Comun\obj\Debug\Comun.csprojAssemblyReference.cache

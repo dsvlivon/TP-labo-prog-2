@@ -62,6 +62,10 @@
       <Project>{cde00db3-074e-44e3-9bff-fdaac3d6b99f}</Project>
       <Name>Excepciones</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PersistenciaDeDatos\PersistenciaDeDatos.csproj">
+      <Project>{5d648335-c289-4340-96b5-ff971f42f7d1}</Project>
+      <Name>PersistenciaDeDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Principal\ClasePrincipal.csproj">
       <Project>{badc9496-78dc-4478-8bf2-bbf800de2cde}</Project>
       <Name>ClasePrincipal</Name>
